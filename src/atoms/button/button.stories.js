@@ -15,6 +15,8 @@ import {
 
 import theme from '../../theme';
 import Button from './button';
+import { ButtonLarge, ButtonLargeLink } from './button-large';
+import ButtonLink from './button-link';
 
 storiesOf('Atoms/Button', module)
     .addDecorator(checkA11y)
@@ -33,7 +35,6 @@ storiesOf('Atoms/Button', module)
             ~~~
         `)(() => (
             <Button
-                large={boolean('Large Button', false)}
                 onClick={action('button clicked')}
                 type={select('Type', Object.keys(theme.colors.types), 'primary')}
             >
@@ -41,3 +42,68 @@ storiesOf('Atoms/Button', module)
             </Button>
         ))
     )
+    .add(
+        'as a link',
+        withInfo(`
+            ## About
+            A simple button that executes an action
+
+            ## Usage
+            ~~~js
+            import { ButtonLarge } from 'component-lib/atoms';
+
+            <ButtonLarge>I am a simple button :)</ButtonLarge>
+            ~~~
+        `)(() => (
+            <ButtonLink
+                href="http://google.com"
+                target="_blank"
+                type={select('Type', Object.keys(theme.colors.types), 'primary')}
+            >
+                {text('Text', 'Go to google')}
+            </ButtonLink>
+        ))
+    )
+    .add(
+        'large button',
+        withInfo(`
+            ## About
+            A simple button that executes an action
+
+            ## Usage
+            ~~~js
+            import { ButtonLarge } from 'component-lib/atoms';
+
+            <ButtonLarge>I am a simple button :)</ButtonLarge>
+            ~~~
+        `)(() => (
+            <ButtonLarge
+                onClick={action('button clicked')}
+                type={select('Type', Object.keys(theme.colors.types), 'primary')}
+            >
+                {text('Text', 'I am a simple button :)')}
+            </ButtonLarge>
+        ))
+    )
+    .add(
+        'large button link',
+        withInfo(`
+            ## About
+            A simple button that executes an action
+
+            ## Usage
+            ~~~js
+            import { ButtonLarge } from 'component-lib/atoms';
+
+            <ButtonLarge>I am a simple button :)</ButtonLarge>
+            ~~~
+        `)(() => (
+            <ButtonLargeLink
+                href="http://google.com"
+                target="_blank"
+                type={select('Type', Object.keys(theme.colors.types), 'primary')}
+            >
+                {text('Text', 'I am a simple button :)')}
+            </ButtonLargeLink>
+        ))
+    );
