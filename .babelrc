@@ -6,5 +6,11 @@
     ],
     "plugins": [
         "transform-export-extensions"
+    ],
+    "ignore": [
+        "**/**.stories.js",
+        "**/**.spec.js",
+        "**/**.test.js",
+        "**/__test__/"
     ]
 }

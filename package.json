@@ -1,35 +1,38 @@
 {
-  "devDependencies": {
-    "@storybook/addon-actions": "^3.3.15",
-    "@storybook/addon-backgrounds": "^3.3.15",
-    "@storybook/addon-console": "^1.0.0",
-    "@storybook/addon-info": "^3.3.15",
-    "@storybook/addon-knobs": "^3.3.15",
-    "@storybook/addon-links": "^3.3.15",
-    "@storybook/addon-viewport": "^3.3.15",
-    "@storybook/react": "^3.3.15",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "eslint-plugin-jest": "^21.15.0",
-    "react-dom": "^16.2.0",
-    "storybook-addon-a11y": "^3.1.9"
-  },
-  "dependencies": {
-    "polished": "^1.9.2",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "recompose": "^0.26.0",
-    "styled-components": "^3.2.3",
-    "styled-system": "^2.2.1",
-    "system-components": "^2.0.2"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  }
+    "devDependencies": {
+        "@storybook/addon-actions": "^3.3.15",
+        "@storybook/addon-backgrounds": "^3.3.15",
+        "@storybook/addon-console": "^1.0.0",
+        "@storybook/addon-info": "^3.3.15",
+        "@storybook/addon-knobs": "^3.3.15",
+        "@storybook/addon-links": "^3.3.15",
+        "@storybook/addon-viewport": "^3.3.15",
+        "@storybook/react": "^3.3.15",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.2",
+        "babel-plugin-transform-export-extensions": "^6.22.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "eslint-plugin-jest": "^21.15.0",
+        "react-dom": "^16.2.0",
+        "storybook-addon-a11y": "^3.1.9"
+    },
+    "dependencies": {
+        "polished": "^1.9.2",
+        "prop-types": "^15.6.1",
+        "react": "^16.2.0",
+        "recompose": "^0.26.0",
+        "styled-components": "^3.2.3",
+        "styled-system": "^2.2.1",
+        "system-components": "^2.0.2"
+    },
+    "scripts": {
+        "build": "babel src -d build --copy-files",
+        "build:watch": "babel src -w -d build --copy-files",
+        "lint": "eslint src/",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
+    }
 }

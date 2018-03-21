@@ -3,6 +3,7 @@ import { configure, addDecorator, setAddon } from '@storybook/react';
 import infoAddon, { setDefaults } from '@storybook/addon-info';
 import { ThemeProvider } from 'styled-components';
 import theme from '../src/theme';
+import '../src/global.styles';
 
 const req = require.context('../src', true, /\.stories\.js$/);
 
